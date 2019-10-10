@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.listen(port, () => console.log('Example app listening on' + PORT + '!'));
+app.listen(port, () => console.log('Example app listening on ' + port + '!'));
 
 const fetch = require('node-fetch');
 app.use((req, res, next) => {
