@@ -41,12 +41,12 @@ app.post('/', (req, res) => {
   );
 });
 
-const url = 'https://telegram-message-bot.herokuapp.com/';
-fetch(url, {
-  method: 'POST',
-  mode: 'cors',
-  body: JSON.stringify({...this.state.form}),
-  headers: {
-  'Content-Type': 'application/json',
-  },
-});
+// const url = 'http://localhost:3000';
+// fetch(url, {
+//   method: 'POST',
+//   mode: 'cors',
+//   body: JSON.stringify({...this.state.form}),
+//   headers: {
+//   'Content-Type': 'application/json',
+//   },
+// });
