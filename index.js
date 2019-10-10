@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 var path = require('path');
+const port = process.env.PORT || 3000
 const Telegram = require('telegraf/telegram');
 const telegram = new Telegram(process.env.BOT_TOKEN, {
   agent: null,
@@ -17,7 +18,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(port, () => console.log('Example app listening on port 3000!'));
 
 const fetch = require('node-fetch');
 app.use((req, res, next) => {
