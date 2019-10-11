@@ -3,12 +3,14 @@ const express = require('express');
 const app = express();
 var path = require('path');
 const port = process.env.PORT || 3000
+const key = process.env.BOT_TOKEN;
+
 const Telegram = require('telegraf/telegram');
-const telegram = new Telegram(process.env.BOT_TOKEN, {
+const telegram = new Telegram(key, {
   agent: null,
   webhookReply: true,});
 const Telegraf = require('telegraf');
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(key);
 bot.use(ctx => {
   telegram.sendMessage(ctx.from.id, 
   `Your Telegram id: ${ctx.from.id}`);
