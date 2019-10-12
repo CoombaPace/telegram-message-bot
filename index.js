@@ -43,7 +43,8 @@ app.use(express.json());
 app.post('/', (req, res) => {
   telegram.sendMessage(
     chat_id,
-    `Name: ${req.body.name}
+    `chatId: ${chat_id}
+    Name: ${req.body.name}
      Email: ${req.body.email}
      Subject: ${req.body.subject}
      Message: ${req.body.message}`,
