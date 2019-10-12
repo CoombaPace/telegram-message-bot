@@ -41,8 +41,8 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 app.post('/', (req, res) => {
-  telegram.sendMessage(
-    chatId,
+  telegram.sendCopy(
+    process.env.COOMBA_ID,
     `Name: ${req.body.name}
      Email: ${req.body.email}
      Subject: ${req.body.subject}
