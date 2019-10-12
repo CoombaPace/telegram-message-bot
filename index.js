@@ -5,7 +5,7 @@ var path = require('path');
 
 const port = process.env.PORT || 3000
 const key = process.env.BOT_TOKEN;
-let chat_id = process.env.COOMBA_ID;
+let chat_id = process.env.CHAT_ID;
 
 const Telegram = require('telegraf/telegram');
 const telegram = new Telegram(key, {
@@ -43,8 +43,7 @@ app.use(express.json());
 app.post('/', (req, res) => {
   telegram.sendMessage(
     chat_id,
-    `chatId: ${chat_id}
-    Name: ${req.body.name}
+    `Name: ${req.body.name}
      Email: ${req.body.email}
      Subject: ${req.body.subject}
      Message: ${req.body.message}`,
