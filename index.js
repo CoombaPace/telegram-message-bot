@@ -47,5 +47,5 @@ app.post('/', (req, res) => {
      Email: ${req.body.email}
      Subject: ${req.body.subject}
      Message: ${req.body.message}`,
-  )
+  ).catch(error => console.log(error))
 });
