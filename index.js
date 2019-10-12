@@ -5,7 +5,7 @@ var path = require('path');
 
 const port = process.env.PORT || 3000
 const key = process.env.BOT_TOKEN;
-const chatId = process.env.COOMBA_ID;
+const chatId = process.env.CHAT_ID;
 
 const Telegram = require('telegraf/telegram');
 const telegram = new Telegram(key, {
